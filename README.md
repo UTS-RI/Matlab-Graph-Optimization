@@ -1,4 +1,5 @@
 Author: Teng Zhang
+
 This code is the general nonlinear least squares optimization for SLAM, that follows the well-known optimization C++ code packages g2o and gtsam styles.
 
 The framework is organized with some necessary warnings for the extension of the new node and new edge.
