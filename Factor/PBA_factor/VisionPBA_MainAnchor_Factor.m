@@ -1,28 +1,27 @@
 function [ ErrorVector, Jacobian_Node ] = VisionPBA_MainAnchor_Factor( Nodes_array , Measurement_values )
 
-pose_m=Nodes_array{1};  
-pose_a=Nodes_array{2};  
-feature=Nodes_array{3}; 
+%pose_m=Nodes_array{1};  
+%pose_a=Nodes_array{2};  
+feature=Nodes_array{1}; 
 
 uv = Measurement_values.uv;
-Tcb= Measurement_values.Tcb;
+%Tcb= Measurement_values.Tcb;
 
 
  
-[X, J_m , J_a, J_i , J_f] =  PBA_Jacobian( pose_m, pose_a, pose_m, feature, Tcb);
+%[X, J_m , J_a, J_i , J_f] =  PBA_Jacobian( pose_m, pose_a, pose_m, feature, Tcb);
 
-ErrorVector= project(X)-uv;
+n = feature(1:3,1);
+A = computeA(n);
 
-if norm(ErrorVector)>2
-   
-    sss= 0;
-    
-end
+ErrorVector= project(n)-uv;
 
 
-Jacobian_Node{1} = dproject(X)*(J_m+J_i);
-Jacobian_Node{2} = dproject(X)*J_a;
-Jacobian_Node{3} = dproject(X)*J_f;
+
+
+%Jacobian_Node{1} = dproject(X)*(J_m+J_i);
+%Jacobian_Node{2} = dproject(X)*J_a;
+Jacobian_Node{1} = dproject(n)*[-skew(n)*A [0;0;0]];
 
 
 end

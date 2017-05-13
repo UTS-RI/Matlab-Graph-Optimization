@@ -16,8 +16,8 @@ for i = 1: num_poses
     pose =  RobotState{pose_No+1}.pose;
     
     if pose_No~=0 && pose_No~=1
-    R = pose(1:3,1:3)*expm(skew( randn(3,1)*0.2));
-    t = pose(1:3,4)+randn(3,1)*1;
+    R = pose(1:3,1:3)*expm(skew( randn(3,1)*0.1));
+    t = pose(1:3,4)+randn(3,1)*0.1;
     pose = [R t];
     end
     

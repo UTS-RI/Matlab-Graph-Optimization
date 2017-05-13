@@ -36,13 +36,13 @@ switch EdgeTypeName
     case 'VisionPBA_Factor'     
        Nodes_array=cell(4,1) ; flag=1;
     case 'VisionPBA_MainAnchor_Factor'     
-       Nodes_array=cell(3,1) ; flag=1;
+       Nodes_array=cell(1,1) ; flag=1;
     case 'VisionPBA_AssAnchor_Factor'     
        Nodes_array=cell(3,1) ; flag=1;
     case 'VisionTestPBA_Factor'     
        Nodes_array=cell(4,1) ; flag=1;
     case 'VisionTestPBA_MainAnchor_Factor'     
-       Nodes_array=cell(3,1) ; flag=1;
+       Nodes_array=cell(1,1) ; flag=1;
     case 'VisionTestPBA_AssAnchor_Factor'     
        Nodes_array=cell(3,1) ; flag=1;   
 end 

@@ -46,9 +46,9 @@ for  i = 1:num_Poses
   
     if strcmpi( current_posename, MainAnchor_name)
        NodeArray = []; 
-       NodeArray{1,1} = 'LPose3'; NodeArray{1,2} = MainAnchor_name;
-       NodeArray{2,1} = 'LPose3'; NodeArray{2,2} = AssAnchor_name;
-       NodeArray{3,1} = 'ParallaxPoint'; NodeArray{3,2} = thislandmark_name;
+       %NodeArray{1,1} = 'LPose3'; NodeArray{1,2} = MainAnchor_name;
+       %NodeArray{2,1} = 'LPose3'; NodeArray{2,2} = AssAnchor_name;
+       NodeArray{1,1} = 'ParallaxPoint'; NodeArray{1,2} = thislandmark_name;
       if   isTestEdge
        [ Graph ] = AddComplexEdge( Graph, 'VisionTestPBA_MainAnchor_Factor', NodeArray, Measurement );
       else
