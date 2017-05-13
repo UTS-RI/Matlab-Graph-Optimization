@@ -10,6 +10,7 @@ This is a matlab code package for **nonlinear least squares optimization**, base
 
 # Customization
 This code allows users to define new variable nodes and new factors/edges/cost functions.
+<<<<<<< HEAD
 1. When the new node is defined, the information needs to be given in the ¡°GetNodeTypeDimension¡±, ¡°SetNodeDefaultValue¡± and ¡°update_state¡±.
 2. When the new edge is defined, the information needs to be given in ¡°GetFactorX_format¡± and ¡°GetEdgeTypeDimension¡±.
 The framework is reorganized with necessary warnings for the extension of the new node and new edge.
@@ -17,6 +18,15 @@ The framework is reorganized with necessary warnings for the extension of the ne
 # Examples for study/use
 1. When you want to perform the estimation for 2D RGBD case, just run ¡°Example_VictoriaPark.m¡±.
 1. When you want to perform the estimation for 3D vision case, just run ¡°Vision_Example_Small.m¡±.
+=======
+1. When the new node is defined, the information needs to be given in the â€œGetNodeTypeDimensionâ€, â€œSetNodeDefaultValueâ€ and â€œupdate_stateâ€.
+2. When the new edge is defined, the information needs to be given in â€œGetFactorX_formatâ€ and â€œGetEdgeTypeDimensionâ€.
+The framework is reorganized with necessary warnings for the extension of the new node and new edge.
+
+# Examples for study/use
+1. When you want to perform the estimation for 2D RGBD case, just run â€œExample_VictoriaPark.mâ€.
+1. When you want to perform the estimation for 3D vision case, just run â€œVision_Example_Small.mâ€.
+>>>>>>> origin/master
 
 # Updates
 1. Any variable can be fix in the process of optimization
