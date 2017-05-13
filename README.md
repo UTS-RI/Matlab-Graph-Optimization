@@ -1,13 +1,29 @@
-Author: Teng Zhang
+This is the latest version of matlab code of nonlinear least squares optimization.
 
-This code is the general nonlinear least squares optimization for SLAM, that follows the well-known optimization C++ code packages g2o and gtsam styles.
+The framework is reorganized with more necessary warnings for the extension of the new node and new edge.
 
-The framework is organized with some necessary warnings for the extension of the new node and new edge.
-Therefore, user can easily define some specific Node/Vertex and Factor/Edge by using this code. 
+This code consists of 5 folders:
+(1)	Data: store the data to be processed
+(2)	Factor: the edge and node 
+(3) g2o_files: core, provide the main framework of the nonlinear least squares
+(4) Math: provide the mathematical operation like so3_exp,...
+(5) auxilliary: others
+(6) Geometry: some operations on geometry such as triangulation
 
-When defining a new factor, the compute error and Jacobians need to given in the "Factor" folder.
-When the new node is defined, the information needs to be given in the ‚ÄúGetNodeTypeDimension‚Äù, ‚ÄúSetNodeDefaultValue‚Äù and ‚Äúupdate_state‚Äù.
-When the new edge is defined, the information needs to be given in ‚ÄúGetFactorX_format‚Äù and ‚ÄúGetEdgeTypeDimension‚Äù.
-Now this code includes some common Factors like IMUfactor, VisionFactor and Nodes like Pose3 and Landmark3.
+This code allows users to define new variable nodes and new factors/edges/cost functions.
+When the new node is defined, the information needs to be given in
+the °∞GetNodeTypeDimension°±, °∞SetNodeDefaultValue°± and °∞update_state°±.
+When the new edge is defined, the information needs to be given in
+°∞GetFactorX_format°± and °∞GetEdgeTypeDimension°±.
 
-Example_VictoriaPark.m may be a good option for initial understanding.
+
+When you want to perform the estimation for 2D RGBD case, just run °∞Example_VictoriaPark.m°±.
+When you want to perform the estimation for 3D vision case, just run °∞Vision_Example_Small.m°±.
+
+update information:
+(1) Any variable can be fix in the process of optimization
+(2) Schur decomposition has been added
+(3) Levenberg-Marquart and Powell's Dogleg have been added
+(4) A novel IMU factor for VINS has been added
+(5) Some parallax vision factor has been added
+(6) VisionTest fator has been added 
