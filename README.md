@@ -1,5 +1,5 @@
 This is the latest version of matlab code of nonlinear least squares optimization.
-
+s
 The framework is reorganized with more necessary warnings for the extension of the new node and new edge.
 
 This code consists of 5 folders:
@@ -12,13 +12,13 @@ This code consists of 5 folders:
 
 This code allows users to define new variable nodes and new factors/edges/cost functions.
 When the new node is defined, the information needs to be given in
-the ¡°GetNodeTypeDimension¡±, ¡°SetNodeDefaultValue¡± and ¡°update_state¡±.
+the â€œGetNodeTypeDimensionâ€, â€œSetNodeDefaultValueâ€ and â€œupdate_stateâ€.
 When the new edge is defined, the information needs to be given in
-¡°GetFactorX_format¡± and ¡°GetEdgeTypeDimension¡±.
+â€œGetFactorX_formatâ€ and â€œGetEdgeTypeDimensionâ€.
 
 
-When you want to perform the estimation for 2D RGBD case, just run ¡°Example_VictoriaPark.m¡±.
-When you want to perform the estimation for 3D vision case, just run ¡°Vision_Example_Small.m¡±.
+When you want to perform the estimation for 2D RGBD case, just run â€œExample_VictoriaPark.mâ€.
+When you want to perform the estimation for 3D vision case, just run â€œVision_Example_Small.mâ€.
 
 update information:
 (1) Any variable can be fix in the process of optimization
