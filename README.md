@@ -8,9 +8,13 @@ This is a matlab code package for **nonlinear least squares optimization**, base
 5. auxilliary: others
 6. Geometry: some operations on geometry such as triangulation
 
+# Document
+1. A tutorial for Optimization on Manifold
+2. A tutorial for Graph Optimization
+
 # Customization
 This code allows users to define new variable nodes and new factors/edges/cost functions.
-<<<<<<< HEAD
+
 1. When the new node is defined, the information needs to be given in the ¡°GetNodeTypeDimension¡±, ¡°SetNodeDefaultValue¡± and ¡°update_state¡±.
 2. When the new edge is defined, the information needs to be given in ¡°GetFactorX_format¡± and ¡°GetEdgeTypeDimension¡±.
 The framework is reorganized with necessary warnings for the extension of the new node and new edge.
@@ -19,14 +23,14 @@ The framework is reorganized with necessary warnings for the extension of the ne
 1. When you want to perform the estimation for 2D RGBD case, just run ¡°Example_VictoriaPark.m¡±.
 1. When you want to perform the estimation for 3D vision case, just run ¡°Vision_Example_Small.m¡±.
 =======
-1. When the new node is defined, the information needs to be given in the â€œGetNodeTypeDimensionâ€, â€œSetNodeDefaultValueâ€ and â€œupdate_stateâ€.
-2. When the new edge is defined, the information needs to be given in â€œGetFactorX_formatâ€ and â€œGetEdgeTypeDimensionâ€.
+1. When the new node is defined, the information needs to be given in the GetNodeTypeDimension.m GetNodeDefaultValue.m and update_state.m
+2. When the new edge is defined, the information needs to be given in GetFactorX_format.m and GetEdgeTypeDimension.m
 The framework is reorganized with necessary warnings for the extension of the new node and new edge.
 
 # Examples for study/use
-1. When you want to perform the estimation for 2D RGBD case, just run â€œExample_VictoriaPark.mâ€.
-1. When you want to perform the estimation for 3D vision case, just run â€œVision_Example_Small.mâ€.
->>>>>>> origin/master
+1. When you want to perform the estimation for 2D RGBD case, just run Example_VictoriaPark.m
+1. When you want to perform the estimation for 3D vision case, just run Vision_Example_Small.m
+
 
 # Updates
 1. Any variable can be fix in the process of optimization
